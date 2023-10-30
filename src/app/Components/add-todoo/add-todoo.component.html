@@ -1,0 +1,14 @@
+<div  style="border:1px solid #ededed; padding:30px; width:600px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+  <h4 style="text-decoration: underline;">Add a Todo:</h4>
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+        <label for="title" class="form-label">Todo Title</label>
+        <input type="text" [(ngModel)]="title" name="title" class="form-control" id="title" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+        <label for="desc" class="form-label">Todo Description</label>
+        <input type="text" [(ngModel)]="desc" name="disc" class="form-control" id="desc">
+        </div>
+        <button type="submit" class="btn btn-sm btn-primary">Add Todo</button>
+  </form>
+</div>

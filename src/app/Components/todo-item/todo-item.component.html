@@ -1,0 +1,12 @@
+<div class="my-3 px-3 d-flex" style="border: 1px solid #e6e6e6; padding: 20px; border-radius: 3px; width: 600px;">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" [(ngModel)]="isChecked" (change)="isCheckedChanged()">
+      <label class="form-check-label"></label>
+    </div>
+    <div>
+      <h5>{{ todo.title }}</h5>
+      <p>{{ todo.desc }}</p>
+      <button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
+    </div>
+  </div>
+  

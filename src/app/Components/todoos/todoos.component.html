@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between " style="margin-top: 30px; ">    
+    <app-add-todoo (todoAdd)="addTodo($event)"></app-add-todoo>
+    <div style="border:1px solid #ededed; padding:30px; width: 660px; border-radius: 5px; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+        <h4 style="text-decoration: underline; ">Your Todos:</h4>
+        <div *ngIf="this.todos.length>0; else elseBlock">
+            <div *ngFor="let todo of todos" >
+                <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo-item>
+            </div>
+        </div>
+        <ng-template #elseBlock>No todos to display.</ng-template>
+    </div>
+</div>
